@@ -30,7 +30,7 @@ jobs:
         run: |
           docker buildx build --platform linux/arm64 -t rjk/centos8arm -f Dockerfile.base . 
           git clone https://github.com/keycloak/keycloak-containers.git
-          cd keycloak-containers/server
-          patch -p1 < ../../image.patch
+          cd keycloak-containers/
+          patch -p1 < ../image.patch
           docker buildx build --platform linux/arm64 -t richardjkendall/keycloak-arm:latest -f Dockerfile .
           docker push richardjkendall/keycloak-arm:latest
