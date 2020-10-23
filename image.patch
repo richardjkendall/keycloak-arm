@@ -1,10 +1,10 @@
 diff --git a/server/Dockerfile b/server/Dockerfile
-index ec03817..b5c8dff 100644
+index ec03817..06a6dc2 100644
 --- a/server/Dockerfile
 +++ b/server/Dockerfile
 @@ -1,6 +1,6 @@
 -FROM registry.access.redhat.com/ubi8-minimal
-+FROM rjk/centos8arm
++FROM richardjkendall/centos8arm
  
 -ENV KEYCLOAK_VERSION 11.0.0
 +ENV KEYCLOAK_VERSION 11.0.2

@@ -31,7 +31,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: build images
         run: |
-          docker buildx build --platform linux/arm64 -t rjk/centos8arm -f Dockerfile.base . 
+          docker buildx build --platform linux/arm64 -t richardjkendall/centos8arm -f Dockerfile.base . --push
           git clone https://github.com/keycloak/keycloak-containers.git
           cd keycloak-containers/
           patch -p1 < ../image.patch
